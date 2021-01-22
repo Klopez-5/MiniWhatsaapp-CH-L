@@ -1,70 +1,75 @@
-## Messenger App using Laravel and Vue.JS
+# MiniWhatsaapp-CH-L
 
-[Youtube Tutorial link](https://www.youtube.com/watch?v=5sXmfwnxfjA&list=PLJpBh2VJhy5x2GKfkfIcn0r6P6uLat7xR)
+# PrySeguridades
+***
+Proyecto de encriptación y desencriptación Seguridades Informáticas
+****
+Para el desarrollo del proyecto se utilizo Laragon, para poder utilizar el Framework de Larave, tambien es necesario tener instalado nodejs
 
-#### [@WeCodeTutorials](https://twitter.com/WeCodeTutorials)
-[![Logo](https://cdn.pbrd.co/images/HdwCut8.png)](https://www.youtube.com/channel/UCj9VatwdukZjNOnIKcpWcsA)
+## Para hacer correr el proyecto
+#### 1. Clonar el proyecto
+git clone https://github.com/mxchacha/PrySeguridades.git
 
-This project is made for my youtube tutorial on "Messenger App with Laravel, Vue.JS & Laravel Echo".
-
-![App Example](https://media.giphy.com/media/8cARsYOk9DmCLZTZOb/giphy.gif)
-
-## get it up and running.
-
-After you clone this project, do the following:
-
-```bash
-# go into the project
+#### 2. Entrar en el proyecto
 cd Messenger-App-VueJS-and-Laravel
 
-# create a .env file
+#### 3. Crear el archivo .env 
 cp .env.example .env
 
-# install composer dependencies
+#### 4. Instalar las dependencias de  composer 
 composer update
 
-# install npm dependencies
+#### 5. Instalar todas las dependencia para que funcione el proyecto
 npm install
 
-# generate a key for your application
+#### 6. Generar un KEY para la aplicacion 
 php artisan key:generate
 
-# create a local MySQL database (make sure you have MySQL up and running)
-mysql -u root
+#### 7. Crer un base de datos local en MySQL
+##### mysql -u root
 
-> create database chat_db;
-> exit;
+##### > create database chat_db;
+##### > exit;
 
-# add the database connection config to your .env file
-DB_CONNECTION=mysql
-DB_DATABASE=chat_db
-DB_USERNAME=root
-DB_PASSWORD=
+#### 8. Agregue la configuración de conexión de la base de datos .env file
+##### DB_CONNECTION=mysql
+##### DB_DATABASE=chat_db
+##### DB_USERNAME=root
+##### DB_PASSWORD=
 
-# run the migration files to generate the schema
+#### 9. ejecutar los archivos de migración para generar el esquema
 php artisan migrate
 
-# visit https://pusher.com and create a free app. then copy the keys into your .env file
-PUSHER_APP_ID=your_pusher_app_id
-PUSHER_APP_KEY=your_pusher_app_key
-PUSHER_APP_SECRET=your_pusher_app_secret
-PUSHER_APP_CLUSTER=your_pusher_cluster
+#### 10. Visitar https://pusher.com y crear un free app y copiar los dato que proporciona pusher dentro del archivo .env file
+![image](https://user-images.githubusercontent.com/57916293/105501679-828a1480-5c92-11eb-9755-2af85b095dce.png)
+##### PUSHER_APP_ID=your_pusher_app_id
+##### PUSHER_APP_KEY=your_pusher_app_key
+##### PUSHER_APP_SECRET=your_pusher_app_secret
+##### PUSHER_APP_CLUSTER=your_pusher_cluster
 
-# change the BROADCAST_DRIVER in your .env to pusher
+
+#### 11. Cambiar BROADCAST_DRIVER dentro del archivo .env poner  pusher
 BROADCAST_DRIVER=pusher
 
-# seed your databse with some users and messages
+#### 12. Enviar los datos de usuarios y mensajes a la DB
 php artisan db:seed
 
-# run webpack and watch for changes
+#### 13. Finalmente correr el proyecto
 npm run watch
-```
 
-## Setup pusher
+## Posibles errores al compilar
+Los siguientes comando se deben instalar  en casode que no funcione correctamente la aplicacion debido a las diferentes versiones de Laravel.
+##### npm install cross-env-no-bin-links
+##### npm i laravel-mix
+##### npm i vue-template-compiler@latest --save
+##### npm i vue -server-renderer@latest --save
 
-- Visit [Pusher website](https://pusher.com), sign up and create your first app (it's free).
-- Next. copy the new keys to your `.env` file.
-- Make sure the necessary settings are enabled
-![Pusher app settings](https://user-images.githubusercontent.com/17595033/64108972-fb7b8a00-cd86-11e9-97ab-d2a3f7699b71.png)
+Dentro del archivo package.json en el apartado de devDependencies agregar o sustuir las siguientes lineas
+##### "vue": "^2.6.12",
+##### "vue-template-compiler": "^2.6.12"
 
-Good Luck :)
+Posteriormente ejecutar 
+##### npm install
+Correr nuevamente el proyecto
+##### npm run watch
+

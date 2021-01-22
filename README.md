@@ -41,6 +41,7 @@ php artisan key:generate
 php artisan migrate
 
 #### 10. Visitar https://pusher.com y crear un free app y copiar los dato que proporciona pusher dentro del archivo .env file
+![image](https://user-images.githubusercontent.com/57916293/105501679-828a1480-5c92-11eb-9755-2af85b095dce.png)
 ##### PUSHER_APP_ID=your_pusher_app_id
 ##### PUSHER_APP_KEY=your_pusher_app_key
 ##### PUSHER_APP_SECRET=your_pusher_app_secret
@@ -55,8 +56,6 @@ php artisan db:seed
 
 #### 13. Finalmente correr el proyecto
 npm run watch
-
-
 
 ## Posibles errores al compilar
 Los siguientes comando se deben instalar  en casode que no funcione correctamente la aplicacion debido a las diferentes versiones de Laravel.
